@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="textarea.css">
+    <script src="jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <textarea id="textarea1"></textarea>
+    <textarea id="textarea2"></textarea>
+    <textarea id="textarea3"></textarea>
+    <br>
+    <button id="button1" >action1</button>
+    <button class="button2" >action2</button>
+    <button class="button3" >action3</button>
+    <button class="button4" >action4</button>
+    <button type="button" onclick="myfunction()">action5</button>
+    <p id="text1" ></p>
+    <script>
+      $(document).ready(function(){
+        $("#button1").click(function(){
+          var x = $("#textarea1").val();
+          var y = $("#textarea2").val();
+          $("#text1").html(x + '<br>' + y);
+          $("p").css("fontSize","inherit");
+          $("p").css("background-color", "white");
+
+        });
+          $(".button2").click(function(){
+            var y = $('#textarea2').val();
+            var x = $('#textarea1').val();
+            $("#text1").html(y + '<br>'+ x);
+            $("p").css("fontSize","inherit");
+            $("p").css("background-color", "white")
+        });
+          $(".button3").click(function(){
+            var x = $('#textarea1').val();
+            var y = $('#textarea2').val();
+            $('.text1').html( x + '<br>'+ y );
+            $("p").css("fontSize","30px");
+            $("p").css("background-color", "yellow");
+            $("p").css("color","#fa118d");
+        });
+          $(".button4").click(function(){
+            var x = $('#textarea1').val();
+            var y = $('#textarea2').val();
+            $('#text1').html(x +'<br>'+ y);
+            $("p").css("fontSize" ,"80px");
+            $("p").css("background-color", "white");
+            $("p").css("color","black");
+        });
+      });
+      function myfunction(){
+        var x = document.getElementById('textarea3').value;
+        document.getElementById('text1').innerHTML=x;
+      }
+    </script>
+  </body>
+</html>

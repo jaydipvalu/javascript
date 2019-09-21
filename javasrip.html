@@ -1,0 +1,152 @@
+<html>
+<body>
+  <h1>what can javascrip.do?</h1>
+  <p id="java">javascrip can change html content.</p>
+<button type="button" onclick='document.getElementById("java").innerHTML = "HELLO"' > CLICK.ME</button>
+  <p id="top"></p>
+  <p id="text"></p>
+  <p id="+="></p>
+  <p id="con"></p>
+  <p id="root"></p>
+  <p id="stringlength"></p>
+  <p id="indexof"></p>
+  <p id="slice"></p>
+  <p>Number</p>
+  <p id="no1"></p>
+  <p id="no2"></p>
+  <p>Number methods</p>
+  <p id="tostring"></p>
+  <p id="toexponential"></p>
+  <p id="tofixed"></p>
+  <p id="demo"></p>
+  <p id="valueOf"></p>
+  <p>arrays</p>
+  <p id="array1"></p>
+  <p id="array2"></p>
+  <p id="array3"></p>
+  <p>Array Methods</p>
+  <p id="join"></p>
+  <p id="pop1"></p>
+  <p id="pop2"></p>
+  <p>comparison</p>
+  <p id="copm1"></p>
+  <script>
+  function myFunction() {
+    document.getElementById("change").innerHTML = " Many students define paragraphs in terms of length";
+  }
+  var x = 7;
+  var y = 5;
+  var z = x+y;
+    document.getElementById("top").innerHTML = z;
+  var x =10;
+   x +=40;
+   document.getElementById("+=").innerHTML = x;
+  var txt1 = "jaydip";
+  var txt2 = "ashish";
+    document.getElementById("con").innerHTML= txt1  + " <br> " + txt2;
+  var  x = 5;
+    document.getElementById("root").innerHTML = x**2;
+  var txt = "jaydipvalu";
+    document.getElementById("stringlength").innerHTML = txt.length;
+  var str = "jaydip jaydipvalu";
+  var res = str.slice(1,5);
+    document.getElementById("slice").innerHTML = res;
+  var x = 3.14;
+  var y = 3;
+    document.getElementById("no1").innerHTML = x + "<br>" + y;
+  var a = 987654321;
+  var b = 123456789;
+    document.getElementById("no2").innerHTML = a + "<br>" + b ;
+  var x = 234 ;
+    document.getElementById("tostring").innerHTML= x.toString() + "<br>" + (334-100).toString() + "<br>" + (180+54).toString();
+  var x = 988.96;
+    document.getElementById("toexponential").innerHTML =
+        x.toExponential()  + "<br>" +
+        x.toExponential(4) + "<br>" +
+        x.toExponential(5) + "<br>" +
+        x.toExponential(6);
+   var x = 9.984;
+    document.getElementById("tofixed").innerHTML=
+      x.toFixed() + "<br>" +
+      x.toFixed(2) + "<br>" +
+      x.toFixed(3);
+    var str = "jaydip valu";
+    var pos = str.lastIndexOf("valu");
+    document.getElementById("demo").innerHTML = pos;
+    var x = 30.24;
+    document.getElementById("valueOf").innerHTML=
+     x.valueOf() + "<br>" +
+    (30.24).valueOf() + "<br>" +
+    (10.20+20.04).valueOf();
+    var cars=["saab","volvo","BMW"];
+     cars[2]= "oddi"
+    document.getElementById("array1").innerHTML=cars;
+    var player,text,bat,i;
+      player=["rahul","virat","dhoni"];
+      bat = player.length;
+      text ="<ul>"
+      for (i=0; i< bat; i++){
+      text +="<li>"+player[i]+"</li>";
+    }
+    text +="</ul>";
+      document.getElementById("array2").innerHTML= text;
+    var player= ["rahul","dhavan","panth"];
+      document.getElementById("array3").innerHTML = player;
+    var Name=["parth","ashish","nitin","yash","rakesh"];
+     document.getElementById("join").innerHTML=Name.join("@")
+    var player=["wornar","finch","cary","zamapa"];
+     document.getElementById("pop1").innerHTML=player;
+    player.shift(); ///player.pop();
+     document.getElementById("pop2").innerHTML=player;
+    var x=8;
+    var y =5;
+    document.getElementById("copm1").innerHTML = (x==y);
+    var x=10;
+
+  </script>
+  <p id="demo1"></p>
+
+  <script>
+    function myFunction(){
+      var x = 5;
+      var Name;
+      if(x < 8){
+      Name = "jaydip";
+    } else{
+      Name="valu";
+    }
+      document.getElementById("demo1").innerHTML= Name;
+
+    }
+    var x=2;
+    var y=3;
+    switch (2) {
+      case 1:
+        document.write(x+y);
+      break;
+      case 2 :
+        document.write(x-y);
+      break;
+      default:
+      document.write("not output")
+    }
+      var x="";
+      var i;
+      for (i=0; i<10;i++){
+      document.write( i + "<br>");
+      }
+        var i=0;
+        while(i<10){
+          document.write(i +"<br>");
+          i++;
+        }
+        var i=20;
+        do{
+          document.write(i);
+          i--;
+        }
+        while (i>10);
+  </script>
+  <button type="button" onclick="myFunction()">CLICK</button>
+</body>
+</html>
